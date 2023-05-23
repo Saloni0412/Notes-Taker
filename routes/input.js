@@ -1,10 +1,7 @@
 const input = require('express').Router();
-// const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 const dbNotes = require("../db/db.json")
-const { readAndAppend, readFromFile } = require('../helpers/fsutils');
-// console.log(uuidv4());
-// const fs = require("../db/")
+
 
 // GET Route for retrieving all the notes
 input.get("/notes", (req, res) => {
