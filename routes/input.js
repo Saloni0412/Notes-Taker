@@ -6,6 +6,7 @@ const newUUID = uuidv4();
 const path = "..\db\db.json";
 
 
+
 // GET Route for retrieving all the notes
 input.get("/notes", (req, res) => {
     res.json(dbNotes);
@@ -19,15 +20,15 @@ input.post('/notes', (req, res) => {
     const newInput = {
       title,
       text,
-      uuid: newUUID,
+      id: newUUID,
     };
 
    dbNotes.push(newInput);
 
    let notesString = JSON.stringify(dbNotes, null, 3);
 
-   fs.writeFile(path, notesString, (err) =>
-     err ? console.error(err) : console.log(`New note is saved`)
+   fs.writeFile("./db/db.json", notesString, (err) =>
+     err ? console.error("error") : console.log(`New note is saved`)
    );
 
     const response = {

@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-const htmlRouter = require("./routes/html");
-const inputRouter = require("./routes/input");
+const htmlRouter = require("./routes/html.js");
+const inputRouter = require("./routes/input.js");
 
 //
 app.use(htmlRouter);

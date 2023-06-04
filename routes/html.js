@@ -1,7 +1,7 @@
 const express = require("express");
 const htmlRouter = express.Router();
 const path = require("path");
-// const fs = require("../public")
+// const fs = require("../public/")
 
 htmlRouter.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '../public/index.html'))
